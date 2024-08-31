@@ -20,29 +20,32 @@ O `WorkerConsumerRabbitMQ` é uma aplicação console .NET que consome mensagens
 
 2. **Instale as dependências:**
 
- No diretório do projeto, execute o comando:
-   ```bash
-   dotnet restore
+    No diretório do projeto, execute o comando:
+   ```
+   $ dotnet restore
+   ```
 
 3. **Configuração das Variáveis de Ambiente:**
 
 Defina a variável de ambiente connectionStringRabbit com a URL de conexão do RabbitMQ. Exemplo:
 
-```bash
+   ```
    export connectionStringRabbit=amqp://guest:guest@localhost:5672/
+   ```
 
 Para sistemas Windows, você pode definir a variável de ambiente no PowerShell:
 
-```bash
-$env:connectionStringRabbit="amqp://guest:guest@localhost:5672/"
-
+   ```
+   $env:connectionStringRabbit="amqp://guest:guest@localhost:5672/"
+   ```
 
 ## Uso
 
 1. **Execute a aplicação:**
 
-```bash
-dotnet run
+   ```
+   dotnet run
+   ```
 
 A aplicação se conectará ao RabbitMQ, declarará uma fila chamada queue1, e começará a consumir mensagens dessa fila. As mensagens recebidas serão exibidas no console.
 
